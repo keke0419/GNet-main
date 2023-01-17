@@ -1,0 +1,13 @@
+HeLa-S3	URL	Signal p-value	IDR thresholded peaks
+CTCF	https://www.encodeproject.org/experiments/ENCSR000DUB	ENCFF959LLF	ENCFF030QAM
+E2F1	https://www.encodeproject.org/experiments/ENCSR000EVM	ENCFF955LBT	ENCFF872RSG
+E2F6	https://www.encodeproject.org/experiments/ENCSR000EVK	ENCFF573ZIC	ENCFF160MCO
+ELK1	https://www.encodeproject.org/experiments/ENCSR000ECI	ENCFF647ESC	ENCFF279OML
+ELK4	https://www.encodeproject.org/experiments/ENCSR000EVI	ENCFF632TTT	ENCFF582BHA
+JUND	https://www.encodeproject.org/experiments/ENCSR000EDH	ENCFF756JBL	ENCFF995QMN
+MAFF	https://www.encodeproject.org/experiments/ENCSR140DSL	ENCFF320OIL	ENCFF280WZN
+MAX	https://www.encodeproject.org/experiments/ENCSR000ECN	ENCFF323ASO	ENCFF666XCS
+MAZ	https://www.encodeproject.org/experiments/ENCSR000ECL	ENCFF036NCL	ENCFF424JHD
+REST	https://www.encodeproject.org/experiments/ENCSR000BMN	ENCFF103IAQ	ENCFF096JDA
+RFX5	https://www.encodeproject.org/experiments/ENCSR000ECX	ENCFF482YCH	ENCFF438ZEN
+TBP	https://www.encodeproject.org/experiments/ENCSR000EDD	ENCFF936GLP	ENCFF363NQY
