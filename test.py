@@ -96,23 +96,23 @@ def main():
     label_pos = np.ones(len(max_pos_t))
 
     rmse = 0
-    r2 = 0
+    # r2 = 0
     pr = 0
     records1 = []
-    records2 = []
+    # records2 = []
     records3 = []
     for t_one, p_one in zip(t_all, p_all):
         rmse += mean_squared_error(t_one, p_one)
         records1.append(mean_squared_error(t_one, p_one))
-        r2 += r2_score(t_one, p_one)
-        records2.append(r2_score(t_one, p_one))
+        # r2 += r2_score(t_one, p_one)
+        # records2.append(r2_score(t_one, p_one))
         pr += pearsonr(t_one, p_one)[0]
         records3.append(pearsonr(t_one, p_one)[0])
     rmse /= len(t_all)
-    r2 /= len(t_all)
+    # r2 /= len(t_all)
     pr /= len(t_all)
-    print("{}: {:.3f}\t{:.3f}\t{:.3f}\n".format(args.name, rmse, r2, pr))
-    f.write("{:.3f}\t{:.3f}\t{:.3f}\n".format(rmse, r2, pr))
+    print("{}: {:.3f}\t{:.3f}\n".format(args.name, rmse, pr))
+    f.write("{:.3f}\t{:.3f}\n".format(rmse, pr))
     ##
     p_all = []
     t_all = []
@@ -131,22 +131,22 @@ def main():
         max_neg_t.append(np.max(signal_t))
     label_neg = np.zeros(len(max_neg_t))
     rmse = 0
-    r2 = 0
+    # r2 = 0
     pr = 0
     records1 = []
-    records2 = []
+    # records2 = []
     records3 = []
     for t_one, p_one in zip(t_all, p_all):
         rmse += mean_squared_error(t_one, p_one)
         records1.append(mean_squared_error(t_one, p_one))
-        r2 += r2_score(t_one, p_one)
-        records2.append(r2_score(t_one, p_one))
+        # r2 += r2_score(t_one, p_one)
+        # records2.append(r2_score(t_one, p_one))
         pr += pearsonr(t_one, p_one)[0]
         records3.append(pearsonr(t_one, p_one)[0])
     rmse /= len(t_all)
     r2 /= len(t_all)
     pr /= len(t_all)
-    print("{}: {:.3f}\t{:.3f}\t{:.3f}\n".format(args.name, rmse, r2, pr))
+    print("{}: {:.3f}\t{:.3f}\n".format(args.name, rmse, pr))
     # f.write("{:.3f}\t{:.3f}\n".format(rmse, pr))
     label = np.concatenate((label_pos, label_neg))
     pred = np.concatenate((np.array(max_pos), np.array(max_neg)))
