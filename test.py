@@ -52,7 +52,7 @@ def main():
     else:
         device = torch.device("cpu")
     f = open(osp.join(args.checkpoint, 'record.txt'), 'w')
-    f.write('RMSE\tPR\n')
+    f.write('RMSE\tPCC\n')
     motifLen = 16
     Data1 = np.load(osp.join(args.data_dir, '%s_test.npz' % args.name))
     seqs1, signals = Data1['data'], Data1['signal']
@@ -154,7 +154,7 @@ def main():
     auroc = roc_auc_score(label, pred)
     auprc = average_precision_score(label, pred)
     print("{}: {:.3f}\t{:.3f}\n".format(args.name, auroc, auprc))
-    f.write('AUC\tPRAUC\n')
+    f.write('AUC\tAUPRC\n')
     f.write("{:.3f}\t{:.3f}\n".format(auroc, auprc))
     f.close()
 
