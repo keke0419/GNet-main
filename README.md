@@ -4,10 +4,10 @@ An integrated context-aware neural framework for transcription factor binding si
 
 ## Requirements
 
-- Pytorch 1.1 [[Install]](https://pytorch.org/)
-- CUDA 10.0
-- Python 3.6
-- Gensim 3.8.3
+- Pytorch = 1.1 [[Install]](https://pytorch.org/)
+- CUDA = 10.0
+- Python = 3.6
+- Gensim = 3.8.3
 - Other Python packages: biopython, scikit-learn, pandas, pyBigWig, scipy, matplotlib, seaborn, nltk
 - Download [hg38.fa, mm10.fa](https://hgdownload.soe.ucsc.edu/downloads.html) then unzip them and put them into `Genome/`
 
