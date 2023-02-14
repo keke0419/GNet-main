@@ -13,7 +13,7 @@ An integrated context-aware neural framework for transcription factor binding si
 
 ## Data Preparation
 
-Sequence preprocessing and one-hot coding:
+- Sequence preprocessing and one-hot coding:
 ```
 python bedsignal-hg38.py -d <> -n <> -s <>
 ```
@@ -24,7 +24,7 @@ python bedsignal-hg38.py -d <> -n <> -s <>
 | -n          | The name of the specified dataset, e.g. CTCF                   |
 | -s          | Random seed (default is 666)                                   |
 
-ND and RFHC coding:
+- ND and RFHC coding:
 
 ```
 python enbinding.py -d <> -n <> -c <> -s <>
