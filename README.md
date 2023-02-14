@@ -38,3 +38,42 @@ python enbinding.py -d <> -n <> -c <> -s <>
 
 ## Model Training
 
+Regression and classification train for specified data sets:
+
+```
+python run.py -d <> -n <> -g <> -s <> -b <> -e <> -c <>
+```
+
+| Arguments  | Description                                                                      |
+| ---------- | -------------------------------------------------------------------------------- |
+| -d         | The path of a specified dataset, e.g. /your_path/GNet-main/GM12878/CTCF/data     |
+| -n         | The name of the specified dataset, e.g. CTCF                                     |
+| -g         | The GPU device id (default is 0)                                                 |
+| -s         | Random seed                                                                      |
+| -b         | The number of sequences in a batch size (default is 500)                         |
+| -e         | The epoch of training steps (default is 50)                                      |
+| -c         | The path for storing models, e.g. /your_path/GNet-main/models/GM12878/CTCF       |
+
+Output:
+
+The trained model can be found in '/your_path/GNet-main/models/GM12878/CTCF/model_best.pth'. 
+
+## Model Testing
+
+Regression and classification tests for specified data set:
+
+```
+python test.py -d <> -n <> -g <> -c <>
+```
+
+| Arguments  | Description                                                                                 |
+| ---------- | ------------------------------------------------------------------------------------------- |
+| -d         | The path of a specified dataset, e.g. /your_path/GNet-main/GM12878/CTCF/data                |
+| -n         | The name of the specified dataset, e.g. CTCF                                                |
+| -g         | The GPU device id (default is 0)                                                            |
+| -c         | The trained model path of a specified dataset, e.g. /your_path/GNet-main/models/GM12878/CTCF|
+
+Output:
+
+The generated test results can be found in '/your_path/GNet-main/models/GM12878/CTCF/record.txt'. These include regression evaluation indicators MSE and PCC values, as well as classified evaluation indicators AUC and AUPRC values.
+
