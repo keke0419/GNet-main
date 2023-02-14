@@ -56,7 +56,7 @@ python run.py -d <> -n <> -g <> -s <> -b <> -e <> -c <>
 
 Output:
 
-The trained model can be found in '/your_path/GNet-main/models/GM12878/CTCF/model_best.pth'. 
+The trained model can be found in `/your_path/GNet-main/models/GM12878/CTCF/model_best.pth`. 
 
 ## Model Testing
 
@@ -75,5 +75,25 @@ python test.py -d <> -n <> -g <> -c <>
 
 Output:
 
-The generated test results can be found in '/your_path/GNet-main/models/GM12878/CTCF/record.txt'. These include regression evaluation indicators MSE and PCC values, as well as classified evaluation indicators AUC and AUPRC values.
+The generated test results can be found in `/your_path/GNet-main/models/GM12878/CTCF/record.txt`. These include regression evaluation indicators MSE and PCC values, as well as classified evaluation indicators AUC and AUPRC values.
 
+## Motif Prediction
+
+Motif prediction for specified test data:
+
+```
+python motif.py -d <> -n <> -g <> -t <> -c <> -o <>
+```
+
+| Arguments  | Description                                                                                 |
+| ---------- | ------------------------------------------------------------------------------------------- |
+| -d         | The path of a specified dataset, e.g. /your_path/GNet-main/GM12878/CTCF/data                |
+| -n         | The name of the specified dataset, e.g. CTCF                                                |
+| -g         | The GPU device id (default is 0)                                                            |
+| -t         | The threshold value (default is 0.3)                                                        |
+| -c         | The trained model path of a specified dataset, e.g. /your_path/GNet-main/models/GM12878/CTCF|
+| -o         | The path of storing motif files, e.g. /your_path/GNet-main/motifs/GM12878/CTCF              |
+
+Output:
+
+The resulting motif file can be found in `/your_path/GNet-main/motifs/GM12878/CTCF/motif.meme` and applied to the TOMTOM motif comparison tool.
