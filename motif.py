@@ -195,7 +195,7 @@ def compute_pfm(motifs, k):
 
 def writeFile(pfm, flag, outdir):
     out_f = open(outdir + '/{}.meme'.format(flag), 'w')
-    out_f.write("MEME version 5.3.3\n\n")
+    out_f.write("MEME version 5.5.1\n\n")
     out_f.write("ALPHABET= ACGT\n\n")
     out_f.write("strands: + -\n\n")
     out_f.write("Background letter frequencies\n")
