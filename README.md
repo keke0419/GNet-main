@@ -97,3 +97,7 @@ python motif.py -d <> -n <> -g <> -t <> -c <> -o <>
 Output:
 
 The resulting motif file can be found in `/your_path/GNet-main/motifs/GM12878/CTCF/motif.meme` and applied to the TOMTOM motif comparison tool.
+
+## Contact
+
+If you have any help and problems, please contact Kexin: kexin1004_0919@163.com
