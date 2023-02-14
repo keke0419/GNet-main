@@ -1,6 +1,6 @@
 # GNet-main
 
-An integrated context-aware neural framework for transcription factor binding signal at single nucleotide resolution prediction
+GNet: An integrated context-aware neural framework for transcription factor binding signal at single nucleotide resolution prediction
 
 ## Requirements
 
